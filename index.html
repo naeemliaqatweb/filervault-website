@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilerVault - 100% Offline Tax & Wealth Vault for Pakistan</title>
+    <meta
+      name="description"
+      content="Sovereign, air-gapped tax management, WHT ledger, and FBR Section 116 wealth statement reconciliation for Pakistani filers. Zero cloud ingestion." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f0f7ff',
+                100: '#e0effe',
+                500: '#0052cc',
+                600: '#0047b3',
+                700: '#003d99',
+                800: '#002966',
+                900: '#081736',
+                emerald: '#059669',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-blue-600 selection:text-white">
+    <!-- Glow Background Effect -->
+    <div
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-blue-600/15 via-indigo-500/10 to-emerald-500/10 blur-[130px] pointer-events-none -z-10"></div>
+
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white tracking-tight"
+              >FilerVault</span
+            >
+            <span
+              class="hidden sm:inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+              >v1.0.0</span
+            >
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-6">
+          <a
+            href="#features"
+            class="hidden md:inline-block text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >Features</a
+          >
+          <a
+            href="#security"
+            class="hidden md:inline-block text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >Security</a
+          >
+          <a
+            href="privacy-policy.html"
+            class="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+            >Privacy Policy</a
+          >
+          <a
+            href="https://github.com/naeemliaqatweb/filervault"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-semibold px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition-all"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 sm:pt-28 sm:pb-24 overflow-hidden text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Badges -->
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-semibold text-slate-300 mb-6 shadow-inner">
+          <span
+            class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>100% On-Device SQLite • Zero Cloud Ingestion</span>
+          <span class="text-slate-600">•</span>
+          <span class="text-blue-400">FBR Section 116 Compliant</span>
+        </div>
+
+        <h1
+          class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          Your Private, Sovereign <br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">
+            Tax & Wealth Dossier
+          </span>
+        </h1>
+
+        <p
+          class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Track taxable income, withholding taxes (WHT), and reconcile your FBR
+          wealth statements with zero cloud risk. Hardware-encrypted on your
+          phone.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="https://github.com/naeemliaqatweb/filervault"
+            target="_blank"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-blue-600/25 flex items-center gap-2 transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+            View on GitHub
+          </a>
+          <a
+            href="privacy-policy.html"
+            class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm transition-all flex items-center gap-2">
+            <svg
+              class="w-5 h-5 text-emerald-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Read Privacy Policy
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section
+      id="features"
+      class="py-16 border-t border-slate-800/80 bg-slate-900/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Engineered Specifically for Pakistan Tax Filers
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-slate-400">
+            Everything you need to organize your Iris declarations, WHT
+            certificates, and wealth statement reconciliation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all shadow-lg">
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              FBR Section 116 Wealth Balancing
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Automated reconciliation between net wealth, declared taxable
+              income, and personal expenses. Computes exact balance to 0 PKR.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all shadow-lg">
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              Iris Tax Code Mapping
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Direct mapping to official Iris tax codes: Salary (1000), Business
+              (5000), Agricultural (6000), Outflow (7000), and Net Assets
+              (920000).
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition-all shadow-lg">
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">
+              BIP-39 12-Word Recovery
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Cryptographic master key generation on device. Restore your tax
+              records and wealth vault anywhere without trusting cloud servers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Highlights Section -->
+    <section id="security" class="py-16 border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="p-8 sm:p-12 rounded-3xl bg-gradient-to-tr from-slate-900 via-slate-900 to-blue-950/40 border border-slate-800 relative overflow-hidden shadow-2xl">
+          <div class="max-w-3xl">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Zero-Cloud Architecture
+            </div>
+            <h2
+              class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Your Financial Ledger is Your Business, Not Ours.
+            </h2>
+            <p class="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+              FilerVault contains no analytics trackers, no advertising
+              identifiers, and no telemetry SDKs. Everything is stored strictly
+              inside your phone’s sandboxed encrypted SQLite database.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-4">
+              <a
+                href="privacy-policy.html"
+                class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wide shadow-lg shadow-emerald-600/20 transition-all">
+                Review Full Privacy Policy &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-400">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>
+          &copy; 2026 FilerVault. Developed by Naeem Liaqat. All rights
+          reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="hover:text-white transition-colors"
+            >Home</a
+          >
+          <a
+            href="privacy-policy.html"
+            class="text-blue-400 hover:text-white transition-colors"
+            >Privacy Policy</a
+          >
+          <a
+            href="https://github.com/naeemliaqatweb/filervault"
+            target="_blank"
+            class="hover:text-white transition-colors"
+            >GitHub Repository</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
